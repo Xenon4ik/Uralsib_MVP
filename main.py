@@ -38,7 +38,6 @@ BASE_STYLES = """
     width: min(var(--maxw), calc(100% - 32px));
     margin: 0 auto;
   }
-
   .header {
     position: sticky;
     top: 0;
@@ -308,7 +307,7 @@ BASE_STYLES = """
   }
 
   .helper-box {
-    margin-top: 18px;
+    margin: 18px 150px 0;
     background: #faf7ff;
     border: 1px dashed #d8cef4;
     border-radius: 18px;
@@ -386,10 +385,10 @@ BASE_STYLES = """
     background: #fcfaff;
     border: 1px solid #ece7f7;
     border-radius: 24px;
-    padding: 28px 36px;
+    padding: 25px 32px;
     display: grid;
-    grid-template-columns: 1fr 220px;
-    gap: 20px;
+    grid-template-columns: 1fr 180px;
+    gap: 5px;
     align-items: center;
     box-shadow: var(--shadow);
   }
@@ -412,11 +411,11 @@ BASE_STYLES = """
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 18px;
+    padding: 8px 16px;
     border-radius: 999px;
     background: #efe7ff;
     color: var(--primary);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     margin-left: 12px;
     vertical-align: middle;
@@ -455,7 +454,7 @@ BASE_STYLES = """
 
   .format-image-wrap img {
     width: 100%;
-    max-width: 200px;
+    max-width: 150px;
     height: auto;
     display: block;
     object-fit: contain;
@@ -489,6 +488,11 @@ BASE_STYLES = """
     gap: 18px;
     align-items: flex-start;
   }
+  .step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  }
 
   .step-number {
     flex: 0 0 auto;
@@ -500,7 +504,7 @@ BASE_STYLES = """
   }
 
   .step-card h3 {
-    margin: 4px 0 10px;
+    margin: 4px 0 20px;
     font-size: 18px;
     line-height: 1.35;
   }
@@ -682,6 +686,140 @@ BASE_STYLES = """
     line-height: 1.7;
   }
 
+  .final-cta {
+    padding: 18px 0 40px;
+  }
+
+  .final-cta-card {
+    background: linear-gradient(90deg, #5f3dc8 0%, #7a4ce6 55%, #8c66f0 100%);
+    border-radius: 28px;
+    padding: 28px 42px;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 1fr;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 18px 40px rgba(110, 64, 216, 0.22);
+  }
+
+  .final-cta-copy h2 {
+    margin: 0 0 15px;
+    font-size: 22px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  .final-cta-copy p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .final-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: nowrap;
+  }
+
+  .final-cta-actions .btn {
+    min-width: 190px;
+    border-radius: 16px;
+  }
+
+  .final-cta-actions .btn-primary {
+    background: #ffffff;
+    color: var(--primary);
+    box-shadow: none;
+  }
+
+  .final-cta-actions .btn-primary:hover {
+    background: #f7f3ff;
+  }
+
+  .final-cta-actions .btn-secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.45);
+  }
+
+  .final-cta-actions .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .final-cta-support {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 320px;
+  }
+
+  .final-cta-support img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+    flex: 0 0 96px;
+  }
+
+  .final-cta-support strong {
+    display: block;
+    font-size: 17px;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .final-cta-support span {
+    font-size: 14px;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .footer {
+    padding: 36px 0 64px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .footer-grid {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    margin-right: 12px;
+  }
+
+  .footer-brand img {
+    height: 42px;
+    width: auto;
+    display: block;
+  }
+
+  .footer-text {
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.45;
+  }
+  .format-title-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+
+  .format-title-row h3 {
+    margin: 0;
+  }
+  }
   @media (max-width: 1024px) {
     .hero-top,
     .feature-row,
@@ -701,9 +839,58 @@ BASE_STYLES = """
     .format-image-wrap {
       justify-content: flex-start;
     }
+    .final-cta-card {
+      grid-template-columns: 1fr;
+      align-items: flex-start;
+    }
+
+    .final-cta-support {
+      min-width: 0;
+    }
   }
+  
 
   @media (max-width: 720px) {
+    .format-title-row {
+      gap: 10px;
+    }
+    .footer-grid {
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .footer-text {
+      font-size: 14px;
+    }
+    .final-cta-card {
+      padding: 24px 20px;
+      gap: 20px;
+    }
+
+    .final-cta-copy h2 {
+      font-size: 26px;
+    }
+
+    .final-cta-actions {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .final-cta-actions .btn {
+      flex: 1 1 100%;
+      min-width: 0;
+    }
+
+    .final-cta-support strong {
+      font-size: 18px;
+    }
+
+    .final-cta-support img {
+      width: 72px;
+      height: 72px;
+      flex-basis: 72px;
+    }
+
     .header-inner {
       min-height: 68px;
       align-items: center;
@@ -811,6 +998,8 @@ BASE_STYLES = """
     .trust-visual img {
       max-width: 220px;
     }
+    
+    
   }
 </style>
 """
@@ -868,7 +1057,7 @@ def landing():
 
               <div class="hero-benefits">
                 <span><i class="dot"></i> Без оплаты госпошлины</span>
-                <span><i class="dot"></i> Без походов в банк</span>
+                <span><i class="dot"></i> Поддержка 24/7</span>
                 <span><i class="dot"></i> Готово от 1 дня</span>
               </div>
             </div>
@@ -906,45 +1095,8 @@ def landing():
         </div>
       </div>
     </section>
-
-    <section class="section" id="choice">
-      <div class="container">
-        <h2 class="section-title">Какой формат подходит вам?</h2>
-        <p class="section-subtitle">Если вы еще не уверены, начните с короткой подсказки — она поможет выбрать сценарий без ошибки.</p>
-
-        <div class="split">
-          <article class="choice-card">
-            <span class="tag">Проще и быстрее</span>
-            <h3>ИП</h3>
-            <p>Подходит для старта, работы без партнеров и большинства услуг.</p>
-            <ul class="choice-list">
-              <li>Меньше документов и проще учет</li>
-              <li>Часто оптимально для фриланса, маркетплейсов и собственных услуг</li>
-              <li>Быстрый старт без сложной структуры компании</li>
-            </ul>
-            <a class="btn btn-primary" href="{url_for('ip_form_page')}">Оформить ИП</a>
-          </article>
-
-          <article class="choice-card">
-            <span class="tag">Для роста и партнеров</span>
-            <h3>ООО</h3>
-            <p>Подходит для совместного бизнеса, партнеров и работы с компаниями.</p>
-            <ul class="choice-list">
-              <li>Удобно, если планируете развивать компанию вместе с партнерами</li>
-              <li>Больше возможностей для работы с юрлицами</li>
-              <li>Надежнее воспринимается в ряде B2B-сценариев</li>
-            </ul>
-            <a class="btn btn-secondary" href="{url_for('ooo_form_page')}">Оформить ООО</a>
-          </article>
-        </div>
-
-        <div class="helper-box">
-          <strong>Не уверены, что выбрать?</strong>
-          ИП — если вы начинаете один и хотите быстро стартовать. ООО — если планируете партнеров, совместный бизнес или работу с компаниями.
-        </div>
-      </div>
-    </section>
-        <section class="format-section">
+   
+    <section class="format-section">
       <div class="container">
         <div class="format-top">
           <div class="format-head">
@@ -963,9 +1115,10 @@ def landing():
         <div class="format-grid">
           <article class="format-card">
             <div>
-              <h3>ИП <span class="format-badge">Проще и быстрее</span></h3>
-              <p class="format-card-subtitle">Для старта и работы без партнёров</p>
-
+              <div class="format-title-row">
+                <h3>ИП</h3>
+                <span class="format-badge">Проще и быстрее</span>
+              </div>
               <ul class="format-list">
                 <li><span class="format-check">✓</span><span>Проще отчётность и налоги</span></li>
                 <li><span class="format-check">✓</span><span>Быстрая регистрация</span></li>
@@ -980,8 +1133,10 @@ def landing():
 
           <article class="format-card">
             <div>
-              <h3>ООО <span class="format-badge">Для роста и партнёров</span></h3>
-              <p class="format-card-subtitle">Для совместного бизнеса и работы с компаниями</p>
+               <div class="format-title-row">
+                <h3>ООО</h3>
+                <span class="format-badge">Больше возможностей</span>
+              </div>
 
               <ul class="format-list">
                 <li><span class="format-check">✓</span><span>Партнёры и инвесторы</span></li>
@@ -996,7 +1151,14 @@ def landing():
           </article>
         </div>
       </div>
+        <div class="section" id="choice">
+          <div class="helper-box">
+            <strong>Не уверены, что выбрать?</strong>
+            ИП — если вы начинаете один и хотите быстро стартовать. ООО — если планируете партнеров, совместный бизнес или работу с компаниями.
+          </div>
+      </div>
     </section>
+  
     <section class="steps-section">
       <div class="container">
         <h2 class="steps-heading">3 шага к регистрации бизнеса</h2>
@@ -1004,7 +1166,7 @@ def landing():
         <div class="steps-cards">
           <article class="step-card">
             <div class="step-number">01</div>
-            <div>
+            <div class="step-content">
               <h3>Заполните онлайн-заявку</h3>
               <p>Простая форма займёт 5-10 минут</p>
             </div>
@@ -1074,17 +1236,40 @@ def landing():
         </div>
       </div>
     </section>
+    <section class="final-cta">
+      <div class="container">
+        <div class="final-cta-card">
+          <div class="final-cta-copy">
+            <h2>Готовы зарегистрировать бизнес?</h2>
+            <p>Это бесплатно и займёт всего несколько минут</p>
+          </div>
+
+          <div class="final-cta-actions">
+            <a class="btn btn-primary" href="{{ url_for('ip_form_page') }}">Оформить ИП</a>
+            <a class="btn btn-secondary" href="{{ url_for('ooo_form_page') }}">Оформить ООО</a>
+          </div>
+
+          <div class="final-cta-support">
+            <div>
+              <strong>Поддержка бизнеса 24/7</strong>
+              <span>Поможем на каждом шаге</span>
+            </div>
+            <img src="{url_for('serve_src', filename='naushniki.png')}" alt="Поддержка 24/7" />
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   
   <footer class="footer">
     <div class="container footer-grid">
-      <div>
-        <a class="brand" href="{url_for('landing')}" aria-label="Уралсиб">
-          <img src="{url_for('serve_src', filename='logo.png')}" alt="Уралсиб" />
-        </a>
-        <div style="margin-top: 12px;">MVP-лендинг для хакатона: редизайн старта воронки онлайн-регистрации бизнеса.</div>
+      <a class="footer-brand" href="{ url_for('landing') }" aria-label="Уралсиб">
+        <img src="{url_for('serve_src', filename='logo2.png') }" alt="Уралсиб" />
+      </a>
+      <div class="footer-text">
+        MVP-лендинг для хакатона: редизайн старта воронки онлайн-регистрации бизнеса.<br>
+        © 2026. Концепт для презентации решения.
       </div>
-      <div>© 2026. Концепт для презентации решения.</div>
     </div>
   </footer>
 </body>
