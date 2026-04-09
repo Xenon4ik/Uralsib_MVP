@@ -33,7 +33,11 @@ BASE_STYLES = """
   }
 
   a { color: inherit; text-decoration: none; }
-  .container { width: min(var(--maxw), calc(100% - 32px)); margin: 0 auto; }
+
+  .container {
+    width: min(var(--maxw), calc(100% - 32px));
+    margin: 0 auto;
+  }
 
   .header {
     position: sticky;
@@ -84,7 +88,9 @@ BASE_STYLES = """
     white-space: nowrap;
   }
 
-  .btn:hover { transform: translateY(-1px); }
+  .btn:hover {
+    transform: translateY(-1px);
+  }
 
   .btn-primary {
     background: linear-gradient(135deg, #7a4ce6 0%, #6437d0 100%);
@@ -316,41 +322,6 @@ BASE_STYLES = """
     margin-bottom: 6px;
   }
 
-  .page-card {
-    width: min(760px, calc(100% - 32px));
-    margin: 56px auto;
-    padding: 36px;
-    border-radius: 28px;
-    background: white;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-  }
-
-  .page-card h1 {
-    font-size: 38px;
-    margin-bottom: 14px;
-  }
-
-  .page-card p {
-    color: var(--muted);
-    font-size: 18px;
-    line-height: 1.7;
-  }
-
-  .footer {
-    padding: 32px 0 48px;
-    color: var(--muted);
-    font-size: 14px;
-  }
-
-  .footer-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    border-top: 1px solid var(--border);
-    padding-top: 24px;
-  }
   .format-section {
     padding: 22px 0 34px;
   }
@@ -490,20 +461,248 @@ BASE_STYLES = """
     object-fit: contain;
   }
 
+  .steps-section {
+    padding: 20px 0 32px;
+  }
+
+  .steps-heading {
+    margin: 0 0 22px;
+    font-size: 46px;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .steps-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 20px;
+  }
+
+  .step-card {
+    background: #ffffff;
+    border: 1px solid #ece7f7;
+    border-radius: 22px;
+    padding: 26px 24px;
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .step-number {
+    flex: 0 0 auto;
+    font-size: 54px;
+    line-height: 1;
+    font-weight: 800;
+    color: #7a4ce6;
+    letter-spacing: -0.04em;
+  }
+
+  .step-card h3 {
+    margin: 4px 0 10px;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .step-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .trust-panel {
+    background: #f7f2ff;
+    border: 1px solid #ece7f7;
+    border-radius: 26px;
+    padding: 30px 32px;
+    box-shadow: var(--shadow);
+    display: grid;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .trust-panel-left {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 28px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .trust-panel-right {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .trust-panel h3 {
+    margin: 0 0 18px;
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .trust-panel p {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .rating-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+
+  .rating-value {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .rating-value strong {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .rating-value span {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .stars {
+    color: #ffbf2f;
+    font-size: 34px;
+    line-height: 1;
+    letter-spacing: 2px;
+  }
+
+  .trust-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .trust-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .trust-feature-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: #efe7ff;
+    color: #7a4ce6;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    font-weight: 800;
+    flex: 0 0 44px;
+  }
+
+  .trust-feature strong {
+    display: block;
+    font-size: 16px;
+    line-height: 1.35;
+    margin-bottom: 4px;
+  }
+
+  .trust-feature span {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .trust-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .trust-visual img {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .shield-note {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 18px;
+  }
+
+  .shield-note-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: #efe7ff;
+    color: #7a4ce6;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    font-weight: 800;
+    flex: 0 0 44px;
+  }
+
+  .shield-note span {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .page-card {
+    width: min(760px, calc(100% - 32px));
+    margin: 56px auto;
+    padding: 36px;
+    border-radius: 28px;
+    background: white;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+
+  .page-card h1 {
+    font-size: 38px;
+    margin-bottom: 14px;
+  }
+
+  .page-card p {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
   @media (max-width: 1024px) {
     .hero-top,
     .feature-row,
-    .split {
+    .split,
+    .steps-cards,
+    .trust-panels,
+    .trust-features,
+    .trust-panel-left,
+    .trust-panel-right {
       grid-template-columns: 1fr;
     }
 
     .hero-side {
       min-height: 240px;
     }
+
     .format-image-wrap {
       justify-content: flex-start;
     }
   }
+
   @media (max-width: 720px) {
     .header-inner {
       min-height: 68px;
@@ -550,6 +749,7 @@ BASE_STYLES = """
       align-items: flex-start;
       gap: 10px;
     }
+
     .format-top {
       flex-direction: column;
       align-items: stretch;
@@ -563,7 +763,12 @@ BASE_STYLES = """
       font-size: 34px;
     }
 
+    .format-grid {
+      grid-template-columns: 1fr;
+    }
+
     .format-card {
+      grid-template-columns: 1fr;
       padding: 22px 22px 24px;
     }
 
@@ -578,17 +783,37 @@ BASE_STYLES = """
     .format-list li {
       font-size: 17px;
     }
-    .format-grid {
-      grid-template-columns: 1fr;
+
+    .steps-heading {
+      font-size: 34px;
     }
 
-    .format-card {
-      grid-template-columns: 1fr;
+    .step-card {
+      padding: 20px 18px;
+    }
+
+    .step-number {
+      font-size: 42px;
+    }
+
+    .trust-panel {
+      padding: 22px 20px;
+    }
+
+    .rating-value strong {
+      font-size: 36px;
+    }
+
+    .stars {
+      font-size: 28px;
+    }
+
+    .trust-visual img {
+      max-width: 220px;
     }
   }
 </style>
 """
-
 
 def render_header():
     return f"""
@@ -767,6 +992,83 @@ def landing():
 
             <div class="format-image-wrap">
               <img src="{url_for('serve_src', filename='building.png')}" alt="ООО" />
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="steps-section">
+      <div class="container">
+        <h2 class="steps-heading">3 шага к регистрации бизнеса</h2>
+
+        <div class="steps-cards">
+          <article class="step-card">
+            <div class="step-number">01</div>
+            <div>
+              <h3>Заполните онлайн-заявку</h3>
+              <p>Простая форма займёт 5-10 минут</p>
+            </div>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">02</div>
+            <div>
+              <h3>Мы подготовим документы</h3>
+              <p>Сформируем и проверим пакет для ФНС</p>
+            </div>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">03</div>
+            <div>
+              <h3>Получите решение и откройте счёт</h3>
+              <p>Мы отправим документы и откроем счёт</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="trust-panels">
+          <article class="trust-panel trust-panel-left">
+            <div>
+              <h3>Надёжный банк для бизнеса</h3>
+
+              <div class="rating-row">
+                <div class="rating-value">
+                  <strong>4,9</strong>
+                  <div class="stars">★ ★ ★ ★ ★</div>
+                  <span>рейтинг на основе отзывов клиентов</span>
+                </div>
+              </div>
+
+              <div class="trust-features">
+                <div class="trust-feature">
+                  <div class="trust-feature-icon"><i class="dot"></i></div>
+                  <div>
+                    <strong>ТОП-5 среди</strong>
+                    <span>для малого бизнеса</span>
+                  </div>
+                </div>
+
+                <div class="trust-feature">
+                  <div class="trust-feature-icon"><i class="dot"></i></div>
+                  <div>
+                    <strong>Работаем в 46</strong>
+                    <span>регионах России</span>
+                  </div>
+                </div>
+
+                <div class="trust-feature">
+                  <div class="trust-feature-icon"><i class="dot"></i></div>
+                  <div>
+                    <strong>Более 30 лет</strong>
+                    <span>в банковском бизнесе</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="trust-visual">
+              <img src="{url_for('serve_src', filename='big_circle.png')}" alt="Надёжный банк для бизнеса" />
             </div>
           </article>
         </div>
