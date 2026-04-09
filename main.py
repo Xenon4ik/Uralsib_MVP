@@ -351,6 +351,144 @@ BASE_STYLES = """
     border-top: 1px solid var(--border);
     padding-top: 24px;
   }
+  .format-section {
+    padding: 22px 0 34px;
+  }
+
+  .format-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 18px;
+  }
+
+  .format-head h2 {
+    margin: 0 0 8px;
+    font-size: 46px;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .format-head p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .format-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-end;
+  }
+
+  .format-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 0 22px;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #ece7f7;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: var(--shadow);
+  }
+
+  .format-pill-outline {
+    border: 2px solid #b89af4;
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  .format-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .format-card {
+    background: #fcfaff;
+    border: 1px solid #ece7f7;
+    border-radius: 24px;
+    padding: 28px 36px;
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 20px;
+    align-items: center;
+    box-shadow: var(--shadow);
+  }
+
+  .format-card h3 {
+    margin: 0 0 8px;
+    font-size: 46px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .format-card-subtitle {
+    margin: 0 0 22px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .format-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #efe7ff;
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 12px;
+    vertical-align: middle;
+  }
+
+  .format-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 18px;
+  }
+
+  .format-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 18px;
+    line-height: 1.45;
+  }
+
+  .format-check {
+    color: #7a4ce6;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1;
+    margin-top: 2px;
+    flex: 0 0 auto;
+  }
+
+  .format-image-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .format-image-wrap img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
 
   @media (max-width: 1024px) {
     .hero-top,
@@ -362,8 +500,10 @@ BASE_STYLES = """
     .hero-side {
       min-height: 240px;
     }
+    .format-image-wrap {
+      justify-content: flex-start;
+    }
   }
-
   @media (max-width: 720px) {
     .header-inner {
       min-height: 68px;
@@ -409,6 +549,41 @@ BASE_STYLES = """
       flex-direction: column;
       align-items: flex-start;
       gap: 10px;
+    }
+    .format-top {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .format-pills {
+      justify-content: flex-start;
+    }
+
+    .format-head h2 {
+      font-size: 34px;
+    }
+
+    .format-card {
+      padding: 22px 22px 24px;
+    }
+
+    .format-card h3 {
+      font-size: 38px;
+    }
+
+    .format-card-subtitle {
+      font-size: 18px;
+    }
+
+    .format-list li {
+      font-size: 17px;
+    }
+    .format-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .format-card {
+      grid-template-columns: 1fr;
     }
   }
 </style>
@@ -544,8 +719,61 @@ def landing():
         </div>
       </div>
     </section>
-  </main>
+        <section class="format-section">
+      <div class="container">
+        <div class="format-top">
+          <div class="format-head">
+            <h2>Какой формат подходит вам?</h2>
+            <p>Ответьте на 3 вопроса — подскажем, что выбрать</p>
+          </div>
 
+          <div class="format-pills">
+            <div class="format-pill">Планируете работать один?</div>
+            <div class="format-pill">Нужны партнёры?</div>
+            <div class="format-pill">Продаёте товары с НДС?</div>
+            <a href="{url_for('register_page')}" class="format-pill format-pill-outline">Пройти подсказчик</a>
+          </div>
+        </div>
+
+        <div class="format-grid">
+          <article class="format-card">
+            <div>
+              <h3>ИП <span class="format-badge">Проще и быстрее</span></h3>
+              <p class="format-card-subtitle">Для старта и работы без партнёров</p>
+
+              <ul class="format-list">
+                <li><span class="format-check">✓</span><span>Проще отчётность и налоги</span></li>
+                <li><span class="format-check">✓</span><span>Быстрая регистрация</span></li>
+                <li><span class="format-check">✓</span><span>Подходит для большинства услуг и торговли</span></li>
+              </ul>
+            </div>
+
+            <div class="format-image-wrap">
+              <img src="{url_for('serve_src', filename='bag.png')}" alt="ИП" />
+            </div>
+          </article>
+
+          <article class="format-card">
+            <div>
+              <h3>ООО <span class="format-badge">Для роста и партнёров</span></h3>
+              <p class="format-card-subtitle">Для совместного бизнеса и работы с компаниями</p>
+
+              <ul class="format-list">
+                <li><span class="format-check">✓</span><span>Партнёры и инвесторы</span></li>
+                <li><span class="format-check">✓</span><span>Больше возможностей для роста</span></li>
+                <li><span class="format-check">✓</span><span>Доверие со стороны крупного бизнеса</span></li>
+              </ul>
+            </div>
+
+            <div class="format-image-wrap">
+              <img src="{url_for('serve_src', filename='building.png')}" alt="ООО" />
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  
   <footer class="footer">
     <div class="container footer-grid">
       <div>
