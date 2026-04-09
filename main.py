@@ -489,9 +489,9 @@ BASE_STYLES = """
     align-items: flex-start;
   }
   .step-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .step-number {
@@ -819,7 +819,7 @@ BASE_STYLES = """
   .format-title-row h3 {
     margin: 0;
   }
-  }
+
   @media (max-width: 1024px) {
     .hero-top,
     .feature-row,
@@ -847,10 +847,16 @@ BASE_STYLES = """
     .final-cta-support {
       min-width: 0;
     }
+     .helper-box {
+    margin: 0 40px;
+    }
   }
   
 
   @media (max-width: 720px) {
+    .helper-box {
+    margin: 0 20px;
+    }
     .format-title-row {
       gap: 10px;
     }
