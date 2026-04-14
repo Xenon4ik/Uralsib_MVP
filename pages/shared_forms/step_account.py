@@ -97,20 +97,22 @@ def get_account_content(flow: str = "ip") -> str:
             </div>
           </div>
 
-          <div class="account-actions">
-            <a href="{url_for('landing')}" class="btn btn-secondary account-btn-save">💾&nbsp;&nbsp;Сохранить и выйти</a>
+         <div class="account-actions">
+        <a href="{url_for('landing')}" class="btn btn-secondary account-btn-save">💾&nbsp;&nbsp;Сохранить и выйти</a>
 
-            <div class="account-actions-right">
-                <a href="{back_url}" class="btn btn-secondary account-btn-back">Назад</a>
-                <a href="{submit_url}" class="btn btn-primary account-btn-next">Сформировать пакет документов</a>
-            </div>
-         </div>
-        <div class="account-protection-note">
-          🔒 Ваши данные защищены и используются только для подготовки документов в ФНС
+        <div class="account-actions-right">
+            <a href="{back_url}" class="btn btn-secondary account-btn-back">Назад</a>
+            <a href="{submit_url}" class="btn btn-primary account-btn-next">Сформировать пакет документов</a>
         </div>
-      </div>
+        </div>
 
-      <aside class="account-aside">
+        <div class="account-protection-note">
+        🔒 Ваши данные защищены и используются только для подготовки документов в ФНС
+        </div>
+        </div>
+        </div>
+
+        <aside class="account-aside">
         <div class="account-aside-card">
           <h3>Что дальше?</h3>
 
@@ -416,15 +418,6 @@ def get_account_content(flow: str = "ip") -> str:
         line-height: 1.5;
       }}
 
-      @media (max-width: 1180px) {{
-        .account-layout {{
-          grid-template-columns: 1fr;
-        }}
-
-        .account-aside {{
-          position: static;
-        }}
-      }}
 
       @media (max-width: 720px) {{
         .account-card {{
@@ -443,6 +436,13 @@ def get_account_content(flow: str = "ip") -> str:
         .account-btn-next {{
           width: 100%;
           min-width: 0;
+        }}
+        .account-layout {{
+            grid-template-columns: 1fr;
+        }}
+
+        .account-aside {{
+            position: static;
         }}
       }}
     </style>
