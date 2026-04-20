@@ -1,0 +1,27 @@
+[33mcommit 76a0ace1cde9cb77a7605987520f324c14231dfd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Alex03366 <alexrub3366@mail.ru>
+Date:   Mon Apr 20 14:01:48 2026 +0300
+
+    Добавлен поисковик ОКВЭД с выбором основного вида деятельности
+
+ __pycache__/styles.cpython-313.pyc                  | Bin [31m17297[m -> [32m17277[m bytes
+ pages/__pycache__/auth.cpython-313.pyc              | Bin [31m3045[m -> [32m3025[m bytes
+ pages/__pycache__/common.cpython-313.pyc            | Bin [31m1815[m -> [32m1795[m bytes
+ pages/__pycache__/landing.cpython-313.pyc           | Bin [31m11179[m -> [32m11159[m bytes
+ pages/ip/__pycache__/__init__.cpython-313.pyc       | Bin [31m179[m -> [32m159[m bytes
+ pages/ip/__pycache__/routes.cpython-313.pyc         | Bin [31m2124[m -> [32m2104[m bytes
+ pages/ip/__pycache__/step1_personal.cpython-313.pyc | Bin [31m17605[m -> [32m17585[m bytes
+ pages/ip/__pycache__/step_wrapper.cpython-313.pyc   | Bin [31m804[m -> [32m784[m bytes
+ pages/ooo/__pycache__/__init__.cpython-313.pyc      | Bin [31m180[m -> [32m160[m bytes
+ pages/ooo/__pycache__/routes.cpython-313.pyc        | Bin [31m2789[m -> [32m2769[m bytes
+ pages/ooo/__pycache__/step1_naming.cpython-313.pyc  | Bin [31m14614[m -> [32m14594[m bytes
+ .../ooo/__pycache__/step2_founders.cpython-313.pyc  | Bin [31m16865[m -> [32m16845[m bytes
+ pages/ooo/__pycache__/step3_company.cpython-313.pyc | Bin [31m17519[m -> [32m17499[m bytes
+ pages/ooo/__pycache__/step_wrapper.cpython-313.pyc  | Bin [31m811[m -> [32m791[m bytes
+ .../__pycache__/__init__.cpython-313.pyc            | Bin [31m189[m -> [32m169[m bytes
+ .../shared_forms/__pycache__/layout.cpython-313.pyc | Bin [31m3600[m -> [32m3580[m bytes
+ .../__pycache__/progress.cpython-313.pyc            | Bin [31m7142[m -> [32m7122[m bytes
+ .../__pycache__/step_account.cpython-313.pyc        | Bin [31m13293[m -> [32m13273[m bytes
+ .../__pycache__/step_activity.cpython-313.pyc       | Bin [31m18336[m -> [32m27801[m bytes
+ .../__pycache__/step_tax.cpython-313.pyc            | Bin [31m16088[m -> [32m16068[m bytes
+ 20 files changed, 0 insertions(+), 0 deletions(-)
